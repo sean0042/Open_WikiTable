@@ -32,3 +32,53 @@ tar -xvzf data.tar.gz
 cd ..
 
 ```
+
+## Retriever Training
+```
+CUDA_VISIBLE_DEVICES=1,2,3,4 \
+torchrun \
+--nnodes=1 \
+--nproc_per_node=4 \
+--rdzv_backend=c10d \
+--rdzv_endpoint=localhost:1111 \
+./src/retriever_train.py \
+--config_path ./config/retriever/reader_bert_bert.yaml \
+--fp16
+```
+
+## Retriever Evaluating
+```
+CUDA_VISIBLE_DEVICES=0 \
+torchrun \
+--nnodes=1 \
+--nproc_per_node=1 \
+--rdzv_backend=c10d \
+--rdzv_endpoint=localhost:1111 \
+./src/retriever_train.py \
+--config_path ./config/retriever/reader_bert_bert.yaml \
+--fp16
+```
+
+## Generator Training
+```
+CUDA_VISIBLE_DEVICES=0,1,2,3 \
+torchrun \
+--nnodes=1 \
+--nproc_per_node=4 \
+--rdzv_backend=c10d \
+--rdzv_endpoint=localhost:1111 \
+./src/generator_train.py \
+--config_path ./config/generator/parser_t5_5.yaml \
+```
+
+## Generator Evaluating
+```
+CUDA_VISIBLE_DEVICES=0 \
+torchrun \
+--nnodes=1 \
+--nproc_per_node=1 \
+--rdzv_backend=c10d \
+--rdzv_endpoint=localhost:1111 \
+./src/generator_eval.py \
+--config_path ./config/generator/parser_t5_5.yaml \
+```
