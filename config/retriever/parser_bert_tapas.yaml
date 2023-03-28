@@ -1,0 +1,14 @@
+exp_name : "parser_bert_tapas"
+path : "./data/"
+seed : 0
+method : "parser"
+
+question_encoder : "bert-base-uncased"
+table_encoder : "google/tapas-base"
+
+lr : 1e-5
+num_epochs : 20
+batch_size : 16
+question_max_len : 64
+warm_up_step : 0
+hard_negative : False 

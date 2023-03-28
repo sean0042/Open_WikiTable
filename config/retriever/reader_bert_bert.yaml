@@ -1,0 +1,14 @@
+exp_name : "reader_bert_bert"
+path : "./data/"
+seed : 0
+method : "reader"
+
+question_encoder : "bert-base-uncased"
+table_encoder : "bert-base-uncased"
+
+lr : 1e-5
+num_epochs : 20
+batch_size : 16
+question_max_len : 64
+warm_up_step : 0
+hard_negative : False 

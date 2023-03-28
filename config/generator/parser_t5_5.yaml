@@ -1,0 +1,16 @@
+exp_name : "parser_t5_5"
+path : "./data/"
+seed : 0
+method : "parser"
+question_encoder : "bert-base-uncased"
+table_encoder : "bert-base-uncased"
+retriever_exp : "reader_bert_bert" 
+
+language_model : "t5-base"
+top_k : 1
+
+
+lr : 1e-5
+num_epochs : 20
+batch_size : 4
+question_max_len : 64
