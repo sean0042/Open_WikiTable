@@ -2,7 +2,7 @@
 
 Despite recent interest in open domain question answering (ODQA) over tables, many studies still rely on datasets that are not truly optimal for the task with respect to utilizing structural nature of table. These datasets assume answers reside as a single cell value and do not necessitate exploring over multiple cells such as aggregation, comparison, and sorting. Thus, we release **Open-WikiTable**, the first ODQA dataset that requires complex reasoning over tables. **Open-WikiTable** is built upon [WikiSQL](https://github.com/salesforce/WikiSQL) and [WikiTableQuestions](https://github.com/ppasupat/WikiTableQuestions) to be applicable in the open-domain setting. As each question is coupled with both textual answers and SQL queries, Open-WikiTable opens up a wide range of possibilities for future research, as both reader and parser methods can be applied. 
 
-The dataset is released along with our paper titled Open-WikiTable :Dataset for Open Domain Question Answering with Complex Reasoning over Table (2023 ACL Findings). For further details, please refer to our paper.
+The dataset is released along with our paper titled [Open-WikiTable :Dataset for Open Domain Question Answering with Complex Reasoning over Table](https://arxiv.org/abs/2305.07288) (2023 ACL Findings). For further details, please refer to our paper.
 
 
 
