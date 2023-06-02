@@ -4,3 +4,5 @@
 /data/valid.json
 /data/test.json
 /data/tables.json
+__pycache__/
+*.ipynb
