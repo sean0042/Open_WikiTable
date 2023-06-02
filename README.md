@@ -49,8 +49,8 @@ The `train.json` , `valid.json` , `test.json` contains the following fields.
 - `question`: the decontextualized and paraphrased version of the question
 - `sql`: the corresponding SQL query for the question 
 - `answer`: the answer for each question in a format of python list
-- `hard_positive_idx`: the index of the splitted table that has every condition that the question is asking for. 
-- `positive_idx`: the index of the splitted table that has at least one but not every condition that the question is asking for. For example, when the question is asking for two conditions(e.g. NFL Team = "New England Patriots" and Position = "Running back"), the hard_positive table has both of the entities inside whereas the positive table has either one of them.
+- `hard_positive_idx`: the index of the splitted table that has every condition that the question is asking for 
+- `positive_idx`: the index of the splitted table that has at least one but not every condition that the question is asking for. For example, when the question is asking for two conditions (e.g. *NFL Team = "New England Patriots" and Position = "Running back"*), the hard_positive table has both of the entities inside whereas the positive table has either one of them
 - `negative_idx`: the index of the splitted table that is similar to the grounding table (based on BM25) but not
 - `dataset`: the origin of the dataset
 
